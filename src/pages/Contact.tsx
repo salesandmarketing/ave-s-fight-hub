@@ -125,20 +125,53 @@ const Contact = () => {
             </form>
           )}
 
-          {/* Social Links */}
-          <div className="mt-12 text-center">
-            <p className="text-muted-foreground text-sm mb-4">Or connect on social media</p>
-            <div className="flex justify-center gap-6">
-              <a href="https://youtube.com/@avetaekwondo" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="YouTube">
-                <Youtube className="h-8 w-8" />
+{/* Social Media Links */}
+          <div className="mt-16 pt-10 border-t border-border text-center">
+            <p className="text-muted-foreground text-sm mb-6">
+              Or follow us on social media
+            </p>
+            
+            <div className="flex justify-center gap-8">
+              {/* YouTube - Main Channel */}
+              <a 
+                href="https://www.youtube.com/@AvesFightChannel"   // ← CHANGE TO YOUR REAL LINK
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-muted-foreground hover:text-red-500 transition-colors group"
+                aria-label="YouTube"
+              >
+                <Youtube className="h-10 w-10 group-hover:scale-110 transition-transform" />
+                <p className="text-xs mt-1 text-red-500">YouTube</p>
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Instagram">
-                <Instagram className="h-8 w-8" />
+
+              {/* Instagram */}
+              <a 
+                href="https://www.instagram.com/avesfightchannel"   // ← CHANGE TO REAL LINK
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-muted-foreground hover:text-pink-500 transition-colors group"
+                aria-label="Instagram"
+              >
+                <Instagram className="h-10 w-10 group-hover:scale-110 transition-transform" />
+                <p className="text-xs mt-1 text-pink-500">Instagram</p>
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Facebook">
-                <Facebook className="h-8 w-8" />
+
+              {/* Facebook */}
+              <a 
+                href="https://www.instagram.com/ahniaespinosa"   // ← CHANGE TO REAL LINK
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-muted-foreground hover:text-blue-500 transition-colors group"
+                aria-label="Facebook"
+              >
+                <Facebook className="h-10 w-10 group-hover:scale-110 transition-transform" />
+                <p className="text-xs mt-1 text-blue-500">Facebook</p>
               </a>
             </div>
+
+            <p className="text-xs text-muted-foreground mt-8">
+              Subscribe for the latest fights, training videos & tournament highlights!
+            </p>
           </div>
         </div>
       </section>
