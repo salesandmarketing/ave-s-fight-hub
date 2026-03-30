@@ -3,6 +3,9 @@ import { Play, ChevronDown, Trophy, Users, Video } from "lucide-react";
 import Layout from "@/components/Layout";
 import heroBg from "@/assets/hero-bg.jpg";
 
+// 1. ADD THIS IMPORT AT THE TOP
+import heroBgMobile from "@/assets/hero-bg-mobile.jpg";
+
 const stats = [
   { icon: Trophy, label: "Medals Won", value: "25+" },
   { icon: Video, label: "YouTube Videos", value: "100+" },
