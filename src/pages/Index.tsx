@@ -17,9 +17,10 @@ const Index = () => {
         <img
           src={heroBg}
           alt="Ave performing a taekwondo kick"
-          className="absolute inset-0 w-full h-full object-cover"
-          width={1920}
-          height={1080}
+      /* ADDED 'object-right' to keep her face visible on narrow phone screens */
+      className="absolute inset-0 w-full h-full object-cover object-right sm:object-center"
+      width={1920}
+      height={1080}
         />
         <div className="absolute inset-0 bg-gradient-hero" />
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
@@ -27,13 +28,13 @@ const Index = () => {
             @avetaekwondo
           </p>
           
-          {/* FIXED: Responsive text sizes and line break for mobile */}
-          <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-8xl uppercase leading-[0.9] mb-4 animate-fade-in-up text-foreground"
-            style={{ animationDelay: "0.1s" }}>
-            Ave's Fight
-            <br className="block sm:hidden" /> {/* This forces a new line only on phones */}
-            <span className="block text-gradient-fire">Channel</span>
-          </h1>
+      {/* FIXED: text-4xl is safer for small phones, <br /> handles the split */}
+        <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-8xl uppercase leading-[0.9] mb-4 animate-fade-in-up text-foreground"
+        style={{ animationDelay: "0.1s" }}>
+        Ave's Fight
+        <br className="block sm:hidden" /> 
+        <span className="block text-gradient-fire">Channel</span>
+      </h1>>
 
           <p
             className="text-base md:text-2xl text-muted-foreground font-light mb-8 animate-fade-in-up"
@@ -42,12 +43,12 @@ const Index = () => {
             Young Fighter. Big Dreams.
           </p>
 
-          {/* FIXED: Buttons stack on mobile and stretch to fit width */}
+          {/* FIXED: flex-col ensures buttons don't overlap on small screens */}
           <div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up"
-            style={{ animationDelay: "0.3s" }}
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up"
+        style={{ animationDelay: "0.3s" }}
           >
-            <a
+          <a
               href="https://youtube.com/@avetaekwondo"
               target="_blank"
               rel="noopener noreferrer"
