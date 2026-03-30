@@ -17,10 +17,11 @@ const Index = () => {
       <img
         src={heroBg}
         alt="Ave performing a taekwondo kick"
-        /* Changed 'object-cover' to include 'object-[percentage]' to slide the photo left */
+        /* object-[80%_center] slides the photo to the left so Ave stays in frame on phones */
         className="absolute inset-0 w-full h-full object-cover object-[80%_center] sm:object-center"
         width={1920}
         height={1080}
+      />
       />
         <div className="absolute inset-0 bg-gradient-hero" />
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
