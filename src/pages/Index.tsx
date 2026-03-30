@@ -12,16 +12,28 @@ const stats = [
 const Index = () => {
   return (
     <Layout>
-    {/* Hero Section */}
+      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <img
-        src={heroBg}
-        alt="Ave performing a taekwondo kick"
-        /* object-[80%_center] slides the photo to the left so Ave stays in frame on phones */
-        className="absolute inset-0 w-full h-full object-cover object-[80%_center] sm:object-center"
-        width={1920}
-        height={1080}
-      />
+        {/* The <picture> tag handles the dynamic image switching */}
+        <picture>
+          {/* If the screen is 640px or WIDER (Tablet/Desktop), use the landscape image */}
+          <source
+            media="(min-width: 640px)"
+            srcSet={heroBg}
+          />
+          {/* If the screen is NARROWER than 640px (Cellphone), use the portrait image */}
+          <img
+            src="/src/assets/hero-bg-mobile.jpg" // *** Update this path to where you saved the portrait image ***
+            alt="Ave and competitor with medals"
+            /* We use 'object-contain' so the whole portrait image fits inside the 'object-cover' frame, 
+               or 'object-cover' if your crop is exactly portrait aspect ratio.
+               Let's stick with object-cover and assume your crop is portrait. */
+            className="absolute inset-0 w-full h-full object-cover object-center"
+            width={1080}
+            height={1920}
+          />
+        </picture>
+  
         <div className="absolute inset-0 bg-gradient-hero" />
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <p className="font-heading text-xs md:text-base uppercase tracking-[0.3em] text-primary mb-4 animate-fade-in-up">
