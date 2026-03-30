@@ -17,20 +17,16 @@ const Index = () => {
     <Layout>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* The <picture> tag handles the dynamic image switching */}
         <picture>
-          {/* If the screen is 640px or WIDER (Tablet/Desktop), use the landscape image */}
+          {/* If screen is 640px or WIDER, use landscape */}
           <source
             media="(min-width: 640px)"
             srcSet={heroBg}
           />
-          {/* If the screen is NARROWER than 640px (Cellphone), use the portrait image */}
+          {/* If screen is NARROWER than 640px, use portrait */}
           <img
-            src="/src/assets/hero-bg-mobile.jpg" // *** Update this path to where you saved the portrait image ***
+            src={heroBgMobile} // CORRECTED: This uses the imported image variable
             alt="Ave and competitor with medals"
-            /* We use 'object-contain' so the whole portrait image fits inside the 'object-cover' frame, 
-               or 'object-cover' if your crop is exactly portrait aspect ratio.
-               Let's stick with object-cover and assume your crop is portrait. */
             className="absolute inset-0 w-full h-full object-cover object-center"
             width={1080}
             height={1920}
