@@ -12,7 +12,7 @@ const stats = [
 const Index = () => {
   return (
     <Layout>
-      {/* Hero Section */}
+    {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <img
           src={heroBg}
@@ -22,36 +22,42 @@ const Index = () => {
           height={1080}
         />
         <div className="absolute inset-0 bg-gradient-hero" />
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <p className="font-heading text-sm md:text-base uppercase tracking-[0.3em] text-primary mb-4 animate-fade-in-up">
+        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+          <p className="font-heading text-xs md:text-base uppercase tracking-[0.3em] text-primary mb-4 animate-fade-in-up">
             @avetaekwondo
           </p>
-          <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl uppercase leading-none mb-4 animate-fade-in-up text-foreground"
+          
+          {/* FIXED: Responsive text sizes and line break for mobile */}
+          <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-8xl uppercase leading-[0.9] mb-4 animate-fade-in-up text-foreground"
             style={{ animationDelay: "0.1s" }}>
             Ave's Fight
+            <br className="block sm:hidden" /> {/* This forces a new line only on phones */}
             <span className="block text-gradient-fire">Channel</span>
           </h1>
+
           <p
-            className="text-lg md:text-2xl text-muted-foreground font-light mb-8 animate-fade-in-up"
+            className="text-base md:text-2xl text-muted-foreground font-light mb-8 animate-fade-in-up"
             style={{ animationDelay: "0.2s" }}
           >
             Young Fighter. Big Dreams.
           </p>
+
+          {/* FIXED: Buttons stack on mobile and stretch to fit width */}
           <div
-            className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up"
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up"
             style={{ animationDelay: "0.3s" }}
           >
             <a
               href="https://youtube.com/@avetaekwondo"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-primary text-primary-foreground px-8 py-4 rounded-sm font-heading uppercase tracking-wider text-sm flex items-center justify-center gap-2 hover:bg-fighter-red-glow transition-all glow-red animate-pulse-glow"
+              className="w-full sm:w-auto bg-primary text-primary-foreground px-8 py-4 rounded-sm font-heading uppercase tracking-wider text-sm flex items-center justify-center gap-2 hover:bg-fighter-red-glow transition-all glow-red animate-pulse-glow"
             >
               <Play className="h-5 w-5" /> Watch Now
             </a>
             <Link
               to="/about"
-              className="border border-foreground/30 text-foreground px-8 py-4 rounded-sm font-heading uppercase tracking-wider text-sm hover:bg-foreground/10 transition-all text-center"
+              className="w-full sm:w-auto border border-foreground/30 text-foreground px-8 py-4 rounded-sm font-heading uppercase tracking-wider text-sm hover:bg-foreground/10 transition-all text-center"
             >
               Meet Ave
             </Link>
