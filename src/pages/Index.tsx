@@ -99,7 +99,7 @@ const Index = () => {
           </p>
           <div className="aspect-video rounded-sm overflow-hidden glow-red">
             <iframe
-              src="https://www.youtube.com/embed?listType=user_uploads&list=avetaekwondo"
+              src="https://www.youtube.com/embed/tHaf9iPjhXM"
               title="Ave Taekwondo - Latest Video"
               className="w-full h-full"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
