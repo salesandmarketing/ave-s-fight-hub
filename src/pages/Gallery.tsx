@@ -3,14 +3,41 @@ import Layout from "@/components/Layout";
 import { X } from "lucide-react";
 
 const galleryImages = [
-  { src: "https://images.unsplash.com/photo-1555597673-b21d5c935865?w=600", alt: "Tournament fight action", category: "Tournament" },
-  { src: "https://images.unsplash.com/photo-1564415315949-7a0c4c73aab4?w=600", alt: "Training session kicks", category: "Training" },
-  { src: "https://images.unsplash.com/photo-1517438476312-10d79c077509?w=600", alt: "Medal ceremony", category: "Tournament" },
-  { src: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600", alt: "Stretching routine", category: "Training" },
-  { src: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600", alt: "Competition warm-up", category: "Event" },
-  { src: "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=600", alt: "Team photo", category: "Event" },
-  { src: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600", alt: "Practice sparring", category: "Training" },
-  { src: "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600", alt: "Award ceremony", category: "Tournament" },
+  { 
+    src: "https://res.cloudinary.com/drt31kff9/image/upload/f_auto,q_auto,w_600/v1774861576/627245366_2517422395342278_8531410530018598950_n_oxqwhs.jpg", 
+    alt: "Training session kicks", 
+    category: "Training" 
+  },
+  { 
+    src: "https://res.cloudinary.com/drt31kff9/image/upload/f_auto,q_auto,w_600/v1774861576/598041225_2475844699500048_1011848455986470366_n_evrqab.jpg", 
+    alt: "Medal ceremony", 
+    category: "Tournament" 
+  },
+  { 
+    src: "https://res.cloudinary.com/drt31kff9/image/upload/f_auto,q_auto,w_600/v1774861576/624833514_1531325129003798_4791431334845355784_n_dfal5g.jpg", 
+    alt: "Stretching routine", 
+    category: "Training" 
+  },
+  { 
+    src: "https://res.cloudinary.com/drt31kff9/image/upload/f_auto,q_auto,w_600/v1774861576/hero-bg_hcyghm.jpg", 
+    alt: "Competition warm-up", 
+    category: "Event" 
+  },
+  { 
+    src: "https://res.cloudinary.com/drt31kff9/image/upload/f_auto,q_auto,w_600/v1774861575/651002689_2551857435232107_681979721076229112_n_ozxo7l.jpg", 
+    alt: "Team photo", 
+    category: "Event" 
+  },
+  { 
+    src: "https://res.cloudinary.com/drt31kff9/image/upload/f_auto,q_auto,w_600/v1774861575/571163333_2433280447089807_6973816351425343919_n_zyqncn.jpg", 
+    alt: "Practice sparring", 
+    category: "Training" 
+  },
+  { 
+    src: "https://res.cloudinary.com/drt31kff9/image/upload/f_auto,q_auto,w_600/v1774861418/626699294_2517422278675623_7495843932256023326_n_-_Copy_ows7bd.jpg", 
+    alt: "Award ceremony", 
+    category: "Tournament" 
+  }
 ];
 
 const Gallery = () => {
@@ -65,7 +92,7 @@ const Gallery = () => {
             <X className="h-8 w-8" />
           </button>
           <img
-            src={galleryImages[lightbox].src.replace("w=600", "w=1200")}
+            src={galleryImages[lightbox].src.replace("w_600", "w_1200")}
             alt={galleryImages[lightbox].alt}
             className="max-w-full max-h-[85vh] object-contain rounded-sm"
             onClick={(e) => e.stopPropagation()}
