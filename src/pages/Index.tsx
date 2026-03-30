@@ -22,7 +22,6 @@ const Index = () => {
         width={1920}
         height={1080}
       />
-      />
         <div className="absolute inset-0 bg-gradient-hero" />
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <p className="font-heading text-xs md:text-base uppercase tracking-[0.3em] text-primary mb-4 animate-fade-in-up">
