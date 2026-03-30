@@ -2,11 +2,12 @@ import Layout from "@/components/Layout";
 import { Calendar, MapPin, Trophy } from "lucide-react";
 
 const events = [
-  { date: "2025-04-15", name: "Manila Youth Taekwondo Open", location: "Manila, Philippines", type: "Regional" },
-  { date: "2025-05-22", name: "Philippine National Championship", location: "Cebu City, Philippines", type: "National" },
-  { date: "2025-07-10", name: "Southeast Asian Junior Championship", location: "Bangkok, Thailand", type: "International" },
-  { date: "2025-09-05", name: "Mindanao Invitational", location: "Davao, Philippines", type: "Regional" },
-  { date: "2025-11-18", name: "Asian Youth Taekwondo Championship", location: "Seoul, South Korea", type: "International" },
+  { date: "2026-03-21", name: "National CPJ Taekwondo Championships (Kyorugi)", location: "Ninoy Aquino Stadium, Manila, Philippines", type: "National" },
+  { date: "2026-05-16", name: "National New Face of the Year Taekwondo Champs (Kyorugi)", location: "Manila, Philippines", type: "National" },
+  { date: "2026-05-31", name: "National New Face of the Year Taekwondo Champs (Poomsae)", location: "Manila, Philippines", type: "National" },
+  { date: "2026-06-26", name: "Global Taekwondo Festival 2026", location: "Philippine Sports Arena, Pasig City, Philippines", type: "International" },
+  { date: "2026-07-25", name: "National Poomsae Taekwondo Championships", location: "Manila, Philippines", type: "National" },
+  { date: "2026-09-25", name: "World Olympics Taekwondo Championships 2026", location: "PhilSports Arena, Pasig City, Philippines", type: "International" }
 ];
 
 const Schedule = () => {
