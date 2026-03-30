@@ -5,22 +5,27 @@ import { Share2 } from "lucide-react";
 const categories = ["All", "Fights", "Training", "Vlogs"] as const;
 
 const videos = [
-  { id: "tHaf9iPjhXM", title: "Tournament Highlights 2025", category: "Fights", date: "2025-03-15" },
-  { id: "tHaf9iPjhXM", title: "Morning Training Routine", category: "Training", date: "2025-03-10" },
-  { id: "tHaf9iPjhXM", title: "Day in the Life of a Young Fighter", category: "Vlogs", date: "2025-03-05" },
-  { id: "tHaf9iPjhXM", title: "Regional Championship Fight", category: "Fights", date: "2025-02-28" },
-  { id: "tHaf9iPjhXM", title: "Speed & Agility Drills", category: "Training", date: "2025-02-20" },
-  { id: "tHaf9iPjhXM", title: "Behind the Scenes at Nationals", category: "Vlogs", date: "2025-02-14" },
-  { id: "tHaf9iPjhXM", title: "Sparring Practice Session", category: "Training", date: "2025-02-01" },
-  { id: "tHaf9iPjhXM", title: "My First International Fight", category: "Fights", date: "2025-01-20" },
-  { id: "tHaf9iPjhXM", title: "Q&A with Fans", category: "Vlogs", date: "2025-01-10" },
+  { id: "fdMVEVPwoE0", title: "Tournament Highlights 2025", category: "Fights", date: "2025-03-15" },
+  { id: "b3LgHBRchpc", title: "Championship Fight", category: "Fights", date: "2025-03-10" },
+  { id: "hQPM_wzI1Wg", title: "Sparring Session", category: "Training", date: "2025-03-05" },
+  { id: "2m8BqMXDbh0", title: "Regional Competition Fight", category: "Fights", date: "2025-02-28" },
+  { id: "IbMjByXkATo", title: "Training Drills & Techniques", category: "Training", date: "2025-02-20" },
+  { id: "TOotx0FvT9c", title: "Behind the Scenes at Nationals", category: "Vlogs", date: "2025-02-14" },
+  { id: "hNS2ekwX7k8", title: "Speed & Agility Practice", category: "Training", date: "2025-02-01" },
+  { id: "nTiD--zbPiw", title: "Fight Day Vlog", category: "Vlogs", date: "2025-01-20" },
+  { id: "ckIx36KMCEI", title: "Gold Medal Match", category: "Fights", date: "2025-01-10" },
+  { id: "l2WkMwiscso", title: "Daily Training Routine", category: "Training", date: "2024-12-15" },
+  { id: "EeUVvimiVuw", title: "Tournament Day Vlog", category: "Vlogs", date: "2024-12-01" },
+  { id: "bj4yrTw0myE", title: "Year in Review", category: "Vlogs", date: "2024-11-15" },
+  { id: "tHaf9iPjhXM", title: "Ave's Fight Channel Intro", category: "Vlogs", date: "2024-10-01" },
 ];
 
-const shareVideo = (title: string) => {
+const shareVideo = (title: string, id: string) => {
+  const url = `https://www.youtube.com/watch?v=${id}`;
   if (navigator.share) {
-    navigator.share({ title, url: window.location.href });
+    navigator.share({ title, url });
   } else {
-    navigator.clipboard.writeText(window.location.href);
+    navigator.clipboard.writeText(url);
     alert("Link copied!");
   }
 };
@@ -61,7 +66,7 @@ const Videos = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filtered.map((video, i) => (
               <div
-                key={i}
+                key={video.id + i}
                 className="bg-card border border-border rounded-sm overflow-hidden card-hover"
               >
                 <div className="aspect-video">
@@ -80,7 +85,7 @@ const Videos = () => {
                       {video.category}
                     </span>
                     <button
-                      onClick={() => shareVideo(video.title)}
+                      onClick={() => shareVideo(video.title, video.id)}
                       className="text-muted-foreground hover:text-primary transition-colors"
                       aria-label="Share video"
                     >

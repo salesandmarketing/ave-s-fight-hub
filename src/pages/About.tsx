@@ -1,15 +1,15 @@
 import Layout from "@/components/Layout";
 import profileImg from "@/assets/ave-profile.jpg";
-import { Trophy, Star, Target, Heart } from "lucide-react";
+import { Trophy, Star, Target, Heart, Users, Video, Eye } from "lucide-react";
 
 const milestones = [
-  { year: "2019", title: "Started Taekwondo Training", desc: "Began the martial arts journey at a local dojang" },
-  { year: "2020", title: "First Tournament Win", desc: "Won gold at the regional youth championship" },
-  { year: "2021", title: "YouTube Channel Launch", desc: "Started @avetaekwondo to share the journey" },
-  { year: "2022", title: "National Competition", desc: "Competed at the Philippine National Taekwondo Championship" },
-  { year: "2023", title: "Black Belt Achieved", desc: "Earned 1st Dan black belt after years of dedication" },
-  { year: "2024", title: "International Debut", desc: "First international competition representing the Philippines" },
-  { year: "2025", title: "Growing the Brand", desc: "Building Ave's Fight Channel and inspiring young fighters" },
+  { year: "2016", title: "YouTube Channel Created", desc: "Ave's Fight Channel was born on September 19, 2016" },
+  { year: "2022", title: "Ahnia Started Taekwondo", desc: "At age 7, Ahnia began her taekwondo training in October 2022" },
+  { year: "2022", title: "First Tournament Gold", desc: "After just two months of training, Ahnia won gold at her first tournament!" },
+  { year: "2023", title: "Amber Joins Taekwondo", desc: "Inspired by Ahnia, 12-year-old sister Amber started training five months later" },
+  { year: "2024", title: "National Competitions", desc: "Both sisters competed in various national games across the Philippines" },
+  { year: "2024", title: "Amber Earns Black Belt", desc: "In under two years, Amber achieved her black belt — remarkable progress!" },
+  { year: "2025", title: "Growing the Channel", desc: "119 videos, 1.56K subscribers, and 180K+ views — and still growing!" },
 ];
 
 const About = () => {
@@ -18,48 +18,54 @@ const About = () => {
       <section className="pt-28 section-padding">
         <div className="container mx-auto max-w-5xl">
           <h1 className="font-heading text-4xl md:text-5xl uppercase text-center mb-12 text-foreground">
-            About <span className="text-primary">Ave</span>
+            About <span className="text-primary">Ave's Fight Channel</span>
           </h1>
 
           {/* Bio Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-20">
             <div className="relative">
-              <div className="aspect-square rounded-sm overflow-hidden glow-red">
+              <div className="aspect-[3/4] rounded-sm overflow-hidden glow-red">
                 <img
                   src={profileImg}
-                  alt="Ave - Young Filipino Taekwondo Fighter"
+                  alt="Ahnia and Amber with medals at Rizal Province Taekwondo Age Group Championship"
                   className="w-full h-full object-cover"
                   width={800}
-                  height={800}
+                  height={1067}
                 />
               </div>
               <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground px-6 py-3 rounded-sm font-heading uppercase text-sm tracking-wider">
-                1st Dan Black Belt
+                Sister Fighters
               </div>
             </div>
             <div>
               <h2 className="font-heading text-2xl uppercase mb-4 text-foreground">
-                Young Fighter. <span className="text-primary">Big Dreams.</span>
+                Welcome to <span className="text-primary">Ave's Fight Channel!</span>
               </h2>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Ave is a young Filipino taekwondo fighter from the Philippines with a
-                passion for martial arts and a dream to compete on the world stage.
-                Starting training at an early age, Ave has quickly risen through the ranks,
-                earning medals at regional and national competitions.
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Ahnia began training in taekwondo in October 2022 when she was seven.
+                After just two months of training, she competed in her first tournament
+                and won a gold medal! This success sparked her passion for taekwondo,
+                leading her to compete in various events, including national games.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Amber, Ahnia's 12-year-old sister, was inspired to start learning
+                taekwondo five months after Ahnia's triumph. She has shown remarkable
+                improvement in her skills, and in under two years, she achieved her black belt!
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Beyond the mat, Ave shares the journey on YouTube as @avetaekwondo,
-                creating content that inspires other young athletes to pursue their
-                martial arts dreams. From training vlogs to fight highlights, every
-                video captures the dedication and spirit of a true fighter.
+                If you want to catch their fights, you can do so on this channel.
+                Subscribing would mean a lot to us! Thank you for your support,
+                and we hope you enjoy watching!
               </p>
 
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { icon: Trophy, label: "25+ Medals" },
-                  { icon: Star, label: "1st Dan Black Belt" },
-                  { icon: Target, label: "National Competitor" },
-                  { icon: Heart, label: "100+ Videos" },
+                  { icon: Trophy, label: "Gold Medalists" },
+                  { icon: Star, label: "Black Belt (Amber)" },
+                  { icon: Users, label: "1.56K Subscribers" },
+                  { icon: Video, label: "119 Videos" },
+                  { icon: Eye, label: "180K+ Views" },
+                  { icon: Target, label: "National Competitors" },
                 ].map((item) => (
                   <div
                     key={item.label}
@@ -82,7 +88,7 @@ const About = () => {
             <div className="flex flex-col gap-8">
               {milestones.map((m, i) => (
                 <div
-                  key={m.year}
+                  key={m.year + m.title}
                   className={`relative flex items-start gap-6 ${
                     i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                   } ml-10 md:ml-0`}
