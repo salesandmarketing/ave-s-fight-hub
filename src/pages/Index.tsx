@@ -28,13 +28,12 @@ const Index = () => {
             @avetaekwondo
           </p>
           
-      {/* FIXED: text-4xl is safer for small phones, <br /> handles the split */}
         <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-8xl uppercase leading-[0.9] mb-4 animate-fade-in-up text-foreground"
-        style={{ animationDelay: "0.1s" }}>
-        Ave's Fight
-        <br className="block sm:hidden" /> 
-        <span className="block text-gradient-fire">Channel</span>
-      </h1>>
+          style={{ animationDelay: "0.1s" }}>
+          Ave's Fight
+          <br className="block sm:hidden" /> 
+          <span className="block text-gradient-fire">Channel</span>
+        </h1>
 
           <p
             className="text-base md:text-2xl text-muted-foreground font-light mb-8 animate-fade-in-up"
