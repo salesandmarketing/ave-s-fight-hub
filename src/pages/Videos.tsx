@@ -5,15 +5,15 @@ import { Share2 } from "lucide-react";
 const categories = ["All", "Fights", "Training", "Vlogs"] as const;
 
 const videos = [
-  { id: "dQw4w9WgXcQ", title: "Tournament Highlights 2025", category: "Fights", date: "2025-03-15" },
-  { id: "dQw4w9WgXcQ", title: "Morning Training Routine", category: "Training", date: "2025-03-10" },
-  { id: "dQw4w9WgXcQ", title: "Day in the Life of a Young Fighter", category: "Vlogs", date: "2025-03-05" },
-  { id: "dQw4w9WgXcQ", title: "Regional Championship Fight", category: "Fights", date: "2025-02-28" },
-  { id: "dQw4w9WgXcQ", title: "Speed & Agility Drills", category: "Training", date: "2025-02-20" },
-  { id: "dQw4w9WgXcQ", title: "Behind the Scenes at Nationals", category: "Vlogs", date: "2025-02-14" },
-  { id: "dQw4w9WgXcQ", title: "Sparring Practice Session", category: "Training", date: "2025-02-01" },
-  { id: "dQw4w9WgXcQ", title: "My First International Fight", category: "Fights", date: "2025-01-20" },
-  { id: "dQw4w9WgXcQ", title: "Q&A with Fans", category: "Vlogs", date: "2025-01-10" },
+  { id: "tHaf9iPjhXM", title: "Tournament Highlights 2025", category: "Fights", date: "2025-03-15" },
+  { id: "tHaf9iPjhXM", title: "Morning Training Routine", category: "Training", date: "2025-03-10" },
+  { id: "tHaf9iPjhXM", title: "Day in the Life of a Young Fighter", category: "Vlogs", date: "2025-03-05" },
+  { id: "tHaf9iPjhXM", title: "Regional Championship Fight", category: "Fights", date: "2025-02-28" },
+  { id: "tHaf9iPjhXM", title: "Speed & Agility Drills", category: "Training", date: "2025-02-20" },
+  { id: "tHaf9iPjhXM", title: "Behind the Scenes at Nationals", category: "Vlogs", date: "2025-02-14" },
+  { id: "tHaf9iPjhXM", title: "Sparring Practice Session", category: "Training", date: "2025-02-01" },
+  { id: "tHaf9iPjhXM", title: "My First International Fight", category: "Fights", date: "2025-01-20" },
+  { id: "tHaf9iPjhXM", title: "Q&A with Fans", category: "Vlogs", date: "2025-01-10" },
 ];
 
 const shareVideo = (title: string) => {
